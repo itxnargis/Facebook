@@ -39,17 +39,17 @@ const contacts = [
 
 export default function Widget({}: Props) {
   return (
-    <div className="hidden md:flex flex-col w-60 p-2 mt-5">
-      <div className="flex justify-center items-center text-gray-500 mb-5">
-        <h2 className="text-xl">Contacts</h2>
-        <div className="flex space-x-2">
-          <HiVideoCamera className="h-6"/>
-          <IoSearch className="h-6"/>
-          <HiOutlineDotsHorizontal className="h-6"/>
+    <div className="hidden md:flex flex-col w-60 p-2 pt-0 mt-5">
+      <div className="flex justify-center items-center text-gray-500">
+        <h2 className="text-xl mr-8">Contacts</h2>
+        <div className="flex space-x-4">
+          <HiVideoCamera className="h-6" />
+          <IoSearch className="h-6" />
+          <HiOutlineDotsHorizontal className="h-6" />
         </div>
       </div>
 
-      {contacts.map(contact => (
+      {contacts.map((contact) => (
         <Contact key={contact.name} src={contact.src} name={contact.name} />
       ))}
     </div>
